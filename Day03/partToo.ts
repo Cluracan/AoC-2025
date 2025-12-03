@@ -21,14 +21,15 @@ const maximiseJoltage = (batteries: number[], joltageLength: number) => {
       stack.pop();
       skipsAvailable--;
     }
-    stack.push(currentValue);
+
+    if (stack.length < joltageLength) {
+      stack.push(currentValue);
+    } else {
+      skipsAvailable--;
+    }
   }
 
-  return stack.reduce(
-    (total, currentValue, index) =>
-      index < joltageLength ? total * 10 + currentValue : total,
-    0
-  );
+  return stack.reduce((total, currentValue) => total * 10 + currentValue, 0);
 };
 
 let totalJoltage = 0;
