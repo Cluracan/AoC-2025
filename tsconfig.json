@@ -1,6 +1,6 @@
 // tsconfig.json
 {
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"] // or at least include "esnext"
+    "lib": ["ESNext", "DOM"]
   }
 }
