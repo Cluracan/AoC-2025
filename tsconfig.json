@@ -1,6 +1,7 @@
 // tsconfig.json
 {
   "compilerOptions": {
+    "target": "es2015",
     "lib": ["ESNext", "DOM"]
   }
 }
